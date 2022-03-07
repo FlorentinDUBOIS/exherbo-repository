@@ -1,0 +1,15 @@
+# Copyright 2022 Florentin Dubois <florentin.dubois@hey.com>
+# Distributed under the terms of the MIT License
+
+require cargo [ crate="ovhctl" rust_minimum_version="1.59.0" ]
+require github [ user="FlorentinDUBOIS" tag="v${PV}" ]
+
+SUMMARY="A command line interface to interact with the ovhcloud api."
+SLOT="0"
+PLATFORMS="~amd64"
+DEPENDENCIES="
+    run:
+        dev-libs/openssl
+        sys-libs/glibc
+        sys-libs/libgcc
+"
