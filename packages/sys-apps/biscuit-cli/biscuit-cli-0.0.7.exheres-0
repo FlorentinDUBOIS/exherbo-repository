@@ -1,0 +1,15 @@
+# Copyright 2022 Florentin Dubois <florentin.dubois@hey.com>
+# Distributed under the terms of the MIT License
+
+require cargo [ crate="biscuit-cli" rust_minimum_version="1.59.0" ]
+require github [ user="biscuit-auth" tag="${PV}" ]
+
+SUMMARY="CLI to generate and inspect biscuit tokens"
+SLOT="0"
+PLATFORMS="~amd64"
+DEPENDENCIES="
+    run:
+        dev-libs/openssl
+        sys-libs/glibc
+        sys-libs/libgcc
+"
